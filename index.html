@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sho.kimoto.net</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script src="https://apikey.kimoty.net/apikey.js"></script>
+</head>
+<body>
+    <div id="contents"></div>
+    <script>
+        fetch('https://kimoto.microcms.io/api/v1/shotaro', {headers: { 'X-MICROCMS-API-KEY': config.apikey }})
+        .then(response => {return(response.json())})
+        .then(json => {
+            document.getElementById('contents').innerHTML = json.contents;
+        });
+    </script>
+</body>
+</html>
