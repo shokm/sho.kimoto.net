@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sho.kimoto.net</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <script src="https://apikey-kimoto-microcms-io.shotaro.jp/apikey.js"></script>
+    <script src="https://sho-kimoto-net.shotaro.jp/script.js"></script>
 </head>
 <body>
     <div id="contents"></div>
     <script>
-        fetch('https://kimoto.microcms.io/api/v1/shotaro', {headers: { 'X-MICROCMS-API-KEY': config.apikey }})
-        .then(response => {return(response.json())})
-        .then(json => {
-            document.getElementById('contents').innerHTML = json.contents;
+        fetch('https://kimoto.microcms.io/api/v1/shotaro', {headers: { 'X-MICROCMS-API-KEY': m2aw0r2aoysm8z34v5gr29nkuqo7mun9fa44 }})
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('contents').innerHTML = data.contents;
         });
     </script>
 </body>
